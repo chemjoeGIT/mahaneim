@@ -348,6 +348,14 @@ section {
     font-weight: 400;
 }
 
+.invitation-text span {
+    display: inline;
+}
+
+.invitation-comma {
+    margin-right: 0.2em;
+}
+
 .invitation-message {
     background: rgba(255, 255, 255, 0.7);
     padding: 35px;
@@ -462,6 +470,25 @@ section {
 .about-image-content {
     height: 100%;
     overflow: hidden;
+    position: relative;
+}
+
+.about-image-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(255, 255, 255, 0) 15%,
+        rgba(255, 255, 255, 0) 85%,
+        rgba(255, 255, 255, 0.7) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
 }
 
 .about-image-content img {
@@ -866,6 +893,19 @@ section {
     .invitation-text,
     .invitation-message {
         padding: 25px;
+    }
+
+    .invitation-text p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        word-break: keep-all;
+        word-wrap: break-word;
+    }
+
+    .invitation-text br {
+        display: block;
+        content: "";
+        margin-top: 0.5em;
     }
 
     .invitation-text p,
