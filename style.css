@@ -39,52 +39,35 @@ body {
 }
 
 /* Music Toggle Button */
-.music-toggle {
+/* Sparkle Effect */
+.sparkle {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, rgba(232, 180, 184, 1) 0%, rgba(232, 180, 184, 0) 70%);
     border-radius: 50%;
-    background: var(--primary-color);
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: var(--transition);
-    -webkit-tap-highlight-color: rgba(232, 180, 184, 0.3);
-    touch-action: manipulation;
-    user-select: none;
-    -webkit-user-select: none;
+    pointer-events: none;
+    z-index: 9999;
+    animation: sparkleAnimation 3s ease-in-out forwards;
 }
 
-.music-toggle:hover {
-    transform: scale(1.1);
-    background: var(--secondary-color);
-}
-
-.music-icon {
-    color: var(--white);
-    position: absolute;
-    transition: var(--transition);
-}
-
-.music-toggle .pause {
-    opacity: 0;
-    transform: scale(0);
-}
-
-.music-toggle.playing .play {
-    opacity: 0;
-    transform: scale(0);
-}
-
-.music-toggle.playing .pause {
-    opacity: 1;
-    transform: scale(1);
+@keyframes sparkleAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateY(0);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1) translateY(-20px);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1) translateY(-40px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0) translateY(-60px);
+    }
 }
 
 /* Hero Section - Full Screen Background */
@@ -869,12 +852,7 @@ section {
         font-size: 1.3rem;
     }
 
-    .music-toggle {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-    }
+
 
     .invitation-title {
         font-size: 2.2rem;
