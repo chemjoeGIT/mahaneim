@@ -416,6 +416,119 @@ section {
     color: var(--text-color);
 }
 
+/* Leaders Section */
+.leaders-section {
+    margin-bottom: 50px;
+}
+
+.leaders-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.leaders-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.leader-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, rgba(232, 180, 184, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.leader-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.leader-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--secondary-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.leader-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.leader-photo.placeholder {
+    background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-text {
+    color: #888;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.leader-details {
+    text-align: center;
+}
+
+.leader-choir {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.leader-name {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Staff Section */
+.staff-section {
+    margin-top: 30px;
+}
+
+.staff-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .staff-info {
     display: flex;
     gap: 30px;
@@ -623,11 +736,24 @@ section {
     font-weight: 500;
     font-size: 1.1rem;
     color: var(--text-color);
+    flex: 1 1 100%;
 }
 
 .song-composer {
     color: #777;
     font-size: 0.95rem;
+}
+
+.song-solo {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: 500;
+    margin-left: auto;
+    padding: 4px 12px;
+    background: rgba(232, 180, 184, 0.15);
+    border-radius: 20px;
+    border: 1px solid rgba(232, 180, 184, 0.3);
 }
 
 .program-description {
@@ -832,6 +958,26 @@ section {
     .song-item {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .song-solo {
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 0.85rem;
+    }
+
+    .leaders-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .leader-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .leader-name {
+        font-size: 1.2rem;
     }
 
     .staff-info {
