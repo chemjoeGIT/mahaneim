@@ -1,8 +1,12 @@
 // Initialize AOS (Animate On Scroll)
+// Disable on mobile to prevent dizziness
 AOS.init({
     duration: 1000,
     once: true,
-    offset: 100
+    offset: 100,
+    disable: function() {
+        return window.innerWidth < 768;
+    }
 });
 
 // Smooth scroll for navigation
@@ -19,27 +23,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Parallax effect for hero section
+// Parallax effect for hero section (disabled on mobile)
 window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    if (window.innerWidth >= 768) {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
     }
 });
 
-// Add sparkle effect on scroll
+// Add sparkle effect on scroll (disabled on mobile)
 function createSparkle() {
-    const sparkle = document.createElement('div');
-    sparkle.className = 'sparkle';
-    sparkle.style.left = Math.random() * window.innerWidth + 'px';
-    sparkle.style.top = Math.random() * window.innerHeight + 'px';
-    sparkle.style.animationDelay = Math.random() * 2 + 's';
-    document.body.appendChild(sparkle);
-    
-    setTimeout(() => {
-        sparkle.remove();
-    }, 3000);
+    if (window.innerWidth >= 768) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.left = Math.random() * window.innerWidth + 'px';
+        sparkle.style.top = Math.random() * window.innerHeight + 'px';
+        sparkle.style.animationDelay = Math.random() * 2 + 's';
+        document.body.appendChild(sparkle);
+        
+        setTimeout(() => {
+            sparkle.remove();
+        }, 3000);
+    }
 }
 
 // Create sparkles periodically
