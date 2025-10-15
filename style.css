@@ -429,6 +429,9 @@ section {
     background: var(--white);
     border-radius: 20px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .choir-section-title {
@@ -1267,12 +1270,12 @@ section {
     }
 
     .about-text-content {
-        padding: 40px 20px;
+        padding: 30px 15px;
     }
 
     .choir-section {
-        padding: 10px;
-        margin-bottom: 15px;
+        padding: 8px;
+        margin-bottom: 12px;
     }
 
     .choir-section-title {
@@ -1307,12 +1310,12 @@ section {
 
     .staff-grid-equal {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 6px;
     }
 
     .staff-photo-equal {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
     }
 
     .staff-name-equal {
@@ -1324,7 +1327,7 @@ section {
     }
 
     .staff-item-equal {
-        padding: 8px;
+        padding: 6px;
     }
 
     .program-item {
@@ -1551,6 +1554,8 @@ section {
     background: var(--light-bg);
     border-radius: 15px;
     transition: var(--transition);
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .staff-item-equal:hover {
