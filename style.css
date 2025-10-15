@@ -404,6 +404,9 @@ section {
 .about-text-content {
     padding: 80px 60px;
     background: var(--light-bg);
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .about-text-content .section-title {
@@ -1085,7 +1088,7 @@ section {
 
     .about-text-content,
     .closing-content {
-        padding: 60px 40px;
+        padding: 60px 30px;
     }
 }
 
@@ -1152,6 +1155,11 @@ section {
     .staff-grid-equal {
         grid-template-columns: 1fr;
         gap: 15px;
+    }
+
+    .choir-section {
+        padding: 10px;
+        margin-bottom: 10px;
     }
 
     .staff-photo-equal {
@@ -1258,9 +1266,13 @@ section {
         padding: 60px 0;
     }
 
+    .about-text-content {
+        padding: 40px 20px;
+    }
+
     .choir-section {
-        padding: 15px;
-        margin-bottom: 25px;
+        padding: 10px;
+        margin-bottom: 15px;
     }
 
     .choir-section-title {
@@ -1293,6 +1305,10 @@ section {
         font-size: 0.8rem;
     }
 
+    .staff-grid-equal {
+        gap: 10px;
+    }
+
     .staff-photo-equal {
         width: 80px;
         height: 80px;
@@ -1304,6 +1320,10 @@ section {
 
     .staff-label-equal {
         font-size: 0.8rem;
+    }
+
+    .staff-item-equal {
+        padding: 10px;
     }
 
     .program-item {
@@ -1516,15 +1536,17 @@ section {
 .staff-grid-equal {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
     margin-top: 10px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .staff-item-equal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
+    padding: 12px;
     background: var(--light-bg);
     border-radius: 15px;
     transition: var(--transition);
