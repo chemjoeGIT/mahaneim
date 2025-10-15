@@ -1270,16 +1270,17 @@ section {
     }
 
     .about-text-content {
-        padding: 30px 15px;
+        padding: 20px 10px;
     }
 
     .choir-section {
-        padding: 8px;
-        margin-bottom: 12px;
+        padding: 5px;
+        margin-bottom: 10px;
     }
 
     .choir-section-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
     }
 
     .leader-photo-main {
@@ -1310,24 +1311,24 @@ section {
 
     .staff-grid-equal {
         grid-template-columns: 1fr;
-        gap: 6px;
+        gap: 4px;
     }
 
     .staff-photo-equal {
-        width: 65px;
-        height: 65px;
+        width: 55px;
+        height: 55px;
     }
 
     .staff-name-equal {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 
     .staff-label-equal {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
 
     .staff-item-equal {
-        padding: 6px;
+        padding: 4px;
     }
 
     .program-item {
