@@ -1586,3 +1586,23 @@ section {
     color: var(--primary-color);
 }
 
+
+
+/* Mahaneim Program Color */
+.mahaneim-program {
+    border-left-color: var(--mahaneim-color);
+}
+
+.mahaneim-program .program-choir {
+    background: var(--mahaneim-color);
+}
+
+.mahaneim-program .program-title {
+    color: var(--mahaneim-color);
+}
+
+.mahaneim-program .song-solo {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
