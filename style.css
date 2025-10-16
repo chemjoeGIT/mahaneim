@@ -1655,3 +1655,117 @@ section {
 
 
 
+
+
+/* Members List Styles */
+.members-list {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.members-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #2C3E50;
+}
+
+.members-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.member-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 6px 0;
+}
+
+.member-part {
+    font-weight: 600;
+    color: #4A90E2;
+    min-width: 60px;
+    flex-shrink: 0;
+}
+
+.member-names {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Mahaneim Members - Blue */
+.mahaneim-members .member-part {
+    color: #4A90E2;
+}
+
+.mahaneim-members .members-title {
+    color: #4A90E2;
+}
+
+/* Trinity Members - Pink */
+.trinity-members .member-part {
+    color: #E8B4B8;
+}
+
+.trinity-members .members-title {
+    color: #E8B4B8;
+}
+
+/* Mobile Responsive for Members List */
+@media (max-width: 768px) {
+    .members-list {
+        padding: 12px;
+        margin-top: 15px;
+    }
+    
+    .members-title {
+        font-size: 1rem;
+    }
+    
+    .member-part {
+        min-width: 50px;
+        font-size: 0.9rem;
+    }
+    
+    .member-names {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .members-list {
+        padding: 8px !important;
+        margin-top: 10px !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+    }
+    
+    .members-title {
+        font-size: 0.85rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .members-grid {
+        gap: 4px !important;
+    }
+    
+    .member-group {
+        padding: 3px 0 !important;
+        gap: 6px !important;
+    }
+    
+    .member-part {
+        min-width: 40px !important;
+        font-size: 0.7rem !important;
+    }
+    
+    .member-names {
+        font-size: 0.7rem !important;
+        line-height: 1.4 !important;
+    }
+}
+
