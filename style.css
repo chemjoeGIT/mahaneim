@@ -1270,12 +1270,20 @@ section {
     }
 
     .about-text-content {
-        padding: 8px 2px;
+        padding: 8px 2px !important;
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .choir-section {
-        padding: 0;
-        margin-bottom: 3px;
+        padding: 0 !important;
+        margin-bottom: 3px !important;
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .choir-section-title {
@@ -1310,8 +1318,11 @@ section {
     }
 
     .staff-grid-equal {
-        grid-template-columns: 1fr;
-        gap: 0;
+        grid-template-columns: 1fr !important;
+        display: grid !important;
+        gap: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .staff-photo-equal {
@@ -1328,7 +1339,10 @@ section {
     }
 
     .staff-item-equal {
-        padding: 0;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .staff-photo-equal {
